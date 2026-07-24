@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Eldoria - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/logo.png">
+</head>
+<body>
+    <!-- Container onde o header será injetado -->
+    <div id="header-container"></div>
+    
+    <!-- Seção de Boas-vindas e Ações Rápidas -->
+    <div class="container">
+        <div class="text-center" style="margin-bottom: 2rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Biblioteca de Eldoria</h1>
+            <p style="font-size: 1.1rem; color: #5a4030;">Forje suas lendas, organize suas crônicas e prepare seus livros para o mundo.</p>
+        </div>
+        
+        <div class="home-cards">
+            <a href="view/rascunhos.html" class="card link-card text-center">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📝 Novo Rascunho</h3>
+                <p>Abra um pergaminho em branco e comece a escrever suas ideias.</p>
+            </a>
+        </div>
+        
+        <!-- Divisória decorativa -->
+        <hr style="border: 0; border-bottom: 2px dashed #c0aa85; margin: 3rem 0;">
+
+        <!-- Seção da Biblioteca Rápida -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h2 style="margin: 0;">Sua Biblioteca</h2>
+            
+            <div class="filtro-container" style="margin: 0; padding: 0.5rem 1rem;">
+                <label for="filtroCategoria"><strong>Filtrar:</strong></label>
+                <select id="filtroCategoria">
+                    <option value="Todos">Todas as Categorias</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="listaLivros" class="list-group"></div>
+    </div>
+
+    <!-- Scripts necessários para a Home funcionar -->
+    <script src="js/components/components.js"></script>
+    <script>
+        UIComponents.renderHeader('.');
+    </script>
+    <script src="js/models.js"></script>
+    <script src="js/app/app-home.js"></script> <!-- Novo script exclusivo da Home -->
+</body>
+</html>

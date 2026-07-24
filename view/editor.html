@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de História</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="container">
+        <!-- Botão para voltar rápido -->
+        <a href="rascunhos.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 1rem;">
+            ← Voltar para Rascunhos
+        </a>
+        
+        <div class="card">
+            <input type="text" id="draftTitle" placeholder="Título do Rascunho">
+            
+            <!-- Campo Misto: Digite ou escolha da lista -->
+            <input type="text" id="draftCategory" list="categoryList" placeholder="Gênero / Categoria (Ex: Aventura, Regras One Piece, Campanha Pokémon...)">
+            <datalist id="categoryList"></datalist>
+
+            <textarea id="draftContent" placeholder="Escreva sua história aqui... (Lembre-se: use // para forçar uma quebra de página)"></textarea>
+            
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <button id="btnSalvar">Salvar Rascunho</button>
+                <button id="btnConverter" class="btn-success">Transformar em Livro</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/components/components.js"></script>
+    <script>UIComponents.renderHeader('..');</script>
+    
+    <script src="../js/models.js"></script>
+    <script src="../js/formatter.js"></script>
+    <script src="../js/app/app-editor.js"></script>
+</body>
+</html>

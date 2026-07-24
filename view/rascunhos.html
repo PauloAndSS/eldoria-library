@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Rascunhos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="container">
+        <h1>Rascunhos</h1>
+        <p>Aqui ficam suas ideias salvas. Clique em um rascunho para continuar escrevendo.</p>
+        
+        <button id="btnNovo" class="btn-success" style="margin-bottom: 1.5rem;">Criar Novo Rascunho</button>
+        
+        <div id="listaRascunhos" class="list-group"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/components/components.js"></script>
+    <script>UIComponents.renderHeader('..');</script>
+    
+    <script src="../js/models.js"></script>
+    <script src="../js/app/app-rascunhos.js"></script>
+</body>
+</html>

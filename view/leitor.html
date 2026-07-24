@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Páginas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="container text-center">
+        <!-- Botão para voltar rápido -->
+        <a href="../index.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 1rem;">
+            ← Voltar para a biblioteca
+        </a>
+        
+        <h1 id="livroTitulo" style="border-bottom: 2px dashed #c0aa85; padding-bottom: 1rem; margin-bottom: 0.5rem;"></h1>
+        <p style="margin-bottom: 2rem;">Páginas: <span id="livroContagem"></span>/100</p>
+        
+        <div id="paginasContainer"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/components/components.js"></script>
+    <script>UIComponents.renderHeader('..');</script>
+    
+    <script src="../js/models.js"></script>
+    <script src="../js/app/app-leitor.js"></script>
+</body>
+</html>
