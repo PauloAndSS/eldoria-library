@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor de História</title>
+    <title>Editor - Minecraft BS</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/editor.css">
     <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
 </head>
+
 <body>
-    <div id="header-container"></div>
-    
-    <div class="container">
-        <!-- Botão para voltar rápido -->
-        <a href="rascunhos.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 1rem;">
-            ← Voltar para Rascunhos
-        </a>
-        
-        <div class="card">
-            <input type="text" id="draftTitle" placeholder="Título do Rascunho">
-            
-            <!-- Campo Misto: Digite ou escolha da lista -->
-            <input type="text" id="draftCategory" list="categoryList" placeholder="Gênero / Categoria (Ex: Aventura, Regras One Piece, Campanha Pokémon...)">
-            <datalist id="categoryList"></datalist>
+    <script type="module" src="../js/controller/editorcontroller.js"></script>
 
-            <textarea id="draftContent" placeholder="Escreva sua história aqui... (Lembre-se: use // para forçar uma quebra de página)"></textarea>
+    <header></header>
+
+    <main id="editor-container">
+        <div id="toolbar">
+            <button onclick="window.location.href='rascunhos.html'" class="btn-voltar">⬅ Voltar</button>
             
-            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                <button id="btnSalvar">Salvar Rascunho</button>
-                <button id="btnConverter" class="btn-success">Transformar em Livro</button>
-            </div>
+            <input type="text" id="titulo-rascunho" placeholder="Título do Rascunho...">
+            
+            <button onclick="salvarRascunho()">Salvar</button>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script src="../js/components/components.js"></script>
-    <script>UIComponents.renderHeader('..');</script>
-    
-    <script src="../js/models.js"></script>
-    <script src="../js/formatter.js"></script>
-    <script src="../js/app/app-editor.js"></script>
+        <textarea id="conteudo-rascunho" rows="20" placeholder="Comece a escrever sua história épica aqui..."></textarea>
+
+        <div id="categorias-container">
+            <h3>Categorias</h3>
+            <div class="categoria-input-group">
+                <input type="text" id="input-categoria" placeholder="Ex: Magia, Dragões, Império...">
+                <button onclick="addCategoriaNaTela()">Adicionar</button>
+            </div>
+            <ul id="lista-categorias">
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
 </body>
+
 </html>

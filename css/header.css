@@ -1,0 +1,64 @@
+.header {
+    background-color: var(--wood-dark);
+    color: var(--bg-parchment);
+    padding: 1.2rem 3rem;
+    border-bottom: 4px solid var(--gold-accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ajuda na responsividade */
+}
+
+/* Título do Header */
+.header h1 {
+    font-family: var(--font-title);
+    color: var(--gold-accent);
+    font-size: 1.8rem;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Navegação e Lista */
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Links Principais */
+.header nav ul li a {
+    text-decoration: none;
+    color: var(--bg-parchment);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+/* Efeito Hover (Brilho Dourado ao passar o mouse) */
+.header nav ul li a:hover {
+    color: var(--gold-hover);
+    text-shadow: 0 0 8px rgba(235, 208, 148, 0.3);
+}
+
+/* ---------- RESPONSIVIDADE (MOBILE) ---------- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        container: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+    .header nav ul {
+        flex-direction: row;
+        container: center;
+        gap: 1rem;
+        width: 100%;
+    }
+}

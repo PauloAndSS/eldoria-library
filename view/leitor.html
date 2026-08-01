@@ -3,30 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leitor de Páginas</title>
+    <title>Leitor - Minecraft BS</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/leitor.css">
     <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
 </head>
 <body>
-    <div id="header-container"></div>
+    <header></header>
     
-    <div class="container text-center">
-        <!-- Botão para voltar rápido -->
-        <a href="../index.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 1rem;">
-            ← Voltar para a biblioteca
-        </a>
-        
-        <h1 id="livroTitulo" style="border-bottom: 2px dashed #c0aa85; padding-bottom: 1rem; margin-bottom: 0.5rem;"></h1>
-        <p style="margin-bottom: 2rem;">Páginas: <span id="livroContagem"></span>/100</p>
-        
-        <div id="paginasContainer"></div>
-    </div>
+    <main id="leitor-container">
+        <div id="capa-wrapper" class="capa-wrapper">
+            <div id="book-cover">
+                <h1 id="cover-title">Carregando Conhecimento...</h1>
+                <p id="cover-author">Minecraft Book Studio</p>
+            </div>
+            <div class="cover-actions">
+                <button onclick="abrirLivro()" class="btn-abrir-livro">📖 Abrir Livro</button>
+                <button onclick="window.location.href='../index.html'" class="btn-voltar-capa">⬅ Voltar para a Estante</button>
+            </div>
 
-    <!-- Scripts -->
-    <script src="../js/components/components.js"></script>
-    <script>UIComponents.renderHeader('..');</script>
+        </div>
+
+        <div id="book-spread" class="escondido">
+
+            <div class="leitor-top-bar">
+                <button onclick="window.location.href='../index.html'" class="btn-fechar">⬅ Voltar para a Estante</button>
+            </div>
+
+            <div class="book-layout-externo">
+
+                <button onclick="paginaAnterior()" id="btn-prev" class="nav-btn">◄</button>
+
+                <div class="pages-wrapper">
+                    <div class="page" id="page-left">
+                        <button class="copy-btn" onclick="copiarPagina('esq')">📋 Copiar</button>
+                        <div id="content-left" class="page-content"></div>
+                        <span class="page-number" id="num-left"></span>
+                    </div>
+
+                    <div class="page" id="page-right">
+                        <button class="copy-btn" onclick="copiarPagina('dir')">📋 Copiar</button>
+                        <div id="content-right" class="page-content"></div>
+                        <span class="page-number" id="num-right"></span>
+                    </div>
+                </div>
+
+                <button onclick="proximaPagina()" id="btn-next" class="nav-btn">►</button>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
     
-    <script src="../js/models.js"></script>
-    <script src="../js/app/app-leitor.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script type="module" src="../js/controller/leitorcontroller.js"></script>
 </body>
 </html>

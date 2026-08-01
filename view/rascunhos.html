@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Rascunhos</title>
+    <title>Rascunhos - Minecraft BS</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/rascunhos.css">
     <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
 </head>
 <body>
-    <div id="header-container"></div>
+    <header></header>
     
-    <div class="container">
-        <h1>Rascunhos</h1>
-        <p>Aqui ficam suas ideias salvas. Clique em um rascunho para continuar escrevendo.</p>
-        
-        <button id="btnNovo" class="btn-success" style="margin-bottom: 1.5rem;">Criar Novo Rascunho</button>
-        
-        <div id="listaRascunhos" class="list-group"></div>
-    </div>
+    <main class="container-rascunhos">
+        <div class="cabecalho-rascunhos">
+            <h1>Seus Rascunhos</h1>
+            <a href="editor.html" class="btn-novo-rascunho">Criar Novo Rascunho</a>
+        </div>
 
-    <!-- Scripts -->
-    <script src="../js/components/components.js"></script>
-    <script>UIComponents.renderHeader('..');</script>
+        <div id="lista-rascunhos" class="grid-rascunhos">
+        </div>
+    </main>
+
+    <footer></footer>
     
-    <script src="../js/models.js"></script>
-    <script src="../js/app/app-rascunhos.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script type="module" src="../js/controller/rascunhoscontroller.js"></script>
 </body>
 </html>

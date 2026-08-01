@@ -1,0 +1,30 @@
+footer {
+    background-color: var(--wood-dark);
+    color: var(--bg-parchment);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-top: 4px solid var(--gold-accent);
+    margin-top: auto; /* Truque com Flexbox (do body) para jogar pro final da tela */
+    font-family: var(--font-body);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)); /* Escurece um pouco a base */
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+footer p:first-child {
+    font-family: var(--font-title);
+    color: var(--gold-accent);
+    font-size: 1.1rem;
+    opacity: 1;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: var(--gold-hover);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
