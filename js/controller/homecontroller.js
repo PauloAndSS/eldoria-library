@@ -71,7 +71,10 @@ function renderizarEstante() {
 }
 
 window.abrirLivro = function(id) {
-    window.location.href = `view/leitor.html?id=${id}`;
+    const isGitHub = window.location.hostname.includes('github.io');
+    const base = isGitHub ? '/minecraft-bookstudio' : '';
+    
+    window.location.href = `${base}/view/leitor.html?id=${id}`;
 };
 
 window.deletarLivro = function(id) {

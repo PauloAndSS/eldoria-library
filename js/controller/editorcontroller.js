@@ -99,4 +99,11 @@ function iniciarEditor() {
     }
 }
 
+window.voltarParaRascunhos = function() {
+    const isGitHub = window.location.hostname.includes('github.io');
+    const base = isGitHub ? '/minecraft-bookstudio' : '';
+    
+    window.location.href = `${base}/view/rascunhos.html`;
+};
+
 iniciarEditor();

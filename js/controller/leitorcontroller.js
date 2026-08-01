@@ -107,4 +107,11 @@ window.copiarPagina = function(lado) {
     }
 };
 
+window.voltarParaHome = function() {
+    const isGitHub = window.location.hostname.includes('github.io');
+    const base = isGitHub ? '/minecraft-bookstudio' : '';
+    
+    window.location.href = `${base}/index.html`;
+};
+
 iniciarLeitor();
