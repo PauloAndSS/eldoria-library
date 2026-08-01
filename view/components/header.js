@@ -10,7 +10,6 @@ function header() {
         <nav>
             <ul>
                 <li><a href="${base}/index.html">Início</a></li>
-                <li><a href="${base}/view/editor.html">Livros</a></li>
                 <li><a href="${base}/view/rascunhos.html">Rascunhos</a></li>
                 <li><a href="${base}/view/sobre.html">Sobre</a></li>
             </ul>
